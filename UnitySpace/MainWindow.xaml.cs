@@ -16,6 +16,7 @@ using MaterialDesignThemes;
 
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 namespace UnitySpace
 {
@@ -24,15 +25,13 @@ namespace UnitySpace
     /// </summary>
     public partial class MainWindow : Window
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\ysf\study\ci\ci2\S8\DotNet\projet\UnitySpace\UnitySpace\User.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
         public MainWindow()
         {
+
             InitializeComponent();
     
         }
-
-
-
 
         private Boolean Login(String email,String password) 
         {
@@ -41,22 +40,39 @@ namespace UnitySpace
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from [User] where email='"+email+ "' and password='"+password+"'";
-
-            /*int count =  cmd.ExecuteNonQuery();*/
             SqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            nameLabel.Content = reader.GetString(1).ToString();
+            if (reader.Read())
+            {
+                connection.Close();
+                return true;
+            }
+            else
+            {
+                connection.Close();
+                return false;
+
+            }
 
 
 
-            connection.Close();
 
-            return true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Login(identifactionLabel.Text.ToString(), passwordLabel.Password);
+            if(Login(identifactionLabel.Text.ToString(), passwordLabel.Password))
+            {
+                Console.WriteLine("login succesfully");
+            }
+            else
+            {
+
+                notification.Content = "Identification or password incorrect";
+                identifactionLabel.Text = "";
+                passwordLabel.Password = "";
+                
+            }
+
         }
     }
 }

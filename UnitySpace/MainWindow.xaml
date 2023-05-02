@@ -14,26 +14,31 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Background="white">
-            <Image Height="100" Width="100" Source="/7504985.png" Margin="0,120,0,0"/>
-            <TextBlock TextWrapping="Wrap" Text="Login" FontFamily="Open Sans" FontSize="22" FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="0,35,0,0"/>
-            
-            <Label Content="Identification" Margin="91,30,0,0"/>
-            <TextBox Name="identifactionLabel" TextWrapping="Wrap" Text="" Margin="91,0" Height="30" VerticalContentAlignment="Center" Padding="3,0,0,0" UseLayoutRounding="False"/>
+            <Image Height="100" Width="100" Source="Images/7504985.png" Margin="0,120,0,0"/>
+            <TextBlock TextWrapping="Wrap" Text="LOGIN" FontFamily="poppins" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,35,0,0"/>
 
-            <Label Content="Password" Margin="91,30,0,0"/>
-            <PasswordBox  Name="passwordLabel"  Margin="91,0" Height="30" VerticalContentAlignment="Center" Padding="3,0,0,0" UseLayoutRounding="False"/>
+            <Label Content="Identification" Margin="91,30,0,0" FontFamily="poppins"/>
+            <TextBox Name="identifactionLabel" TextWrapping="Wrap" Text="" Margin="91,0" Height="30" VerticalContentAlignment="Center" Padding="3,0,0,0" UseLayoutRounding="False" FontFamily="poppins"/>
 
-            <Button materialDesign:ButtonAssist.CornerRadius="5" Background="#3880FF" Foreground="White" Content="Login" VerticalContentAlignment="Stretch" Margin="91,40,91,0" Padding="1,4,1,4" Click="Button_Click" />
+            <Label Content="Password" FontFamily="poppins" Margin="91,30,0,0"/>
+            <PasswordBox  Name="passwordLabel"  Margin="91,0" Height="30" VerticalContentAlignment="Center" Padding="3,0,0,0" UseLayoutRounding="False" FontFamily="poppins"/>
 
+            <Button materialDesign:ButtonAssist.CornerRadius="4" Background="#3880FF" Foreground="White" Content="Login" VerticalContentAlignment="Stretch" Margin="91,40,91,0" Padding="1,4,1,4" Click="Button_Click" FontFamily="poppins" >
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Button.BorderBrush>
+            </Button>
+
+            <Label  Name="notification" FontFamily="poppins" Margin="91,30,0,0" Foreground="red"></Label>
 
 
         </StackPanel>
 
         <StackPanel Grid.Column="1" Background="#3880FF">
-            <Image Source="/loginAsset.png" VerticalAlignment="Center" Margin="0,100"/>
-            <TextBlock Foreground="White" FontFamily="Open Sans" FontSize="28" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Margin="0,-100,0,0" ><Run Text="UnitySpace"/></TextBlock>
-            <TextBlock Foreground="White" FontFamily="Open Sans" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Margin="52,0,51,0">
-                 Is an innovative collaborative meeting application designed to simplify and streamline the way teams communicate and work together. In today's fast-paced business environment, organizations need a reliable platform that can connect team members, regardless of their physical location, to ensure effective collaboration and decision-making.
+            <Image Source="Images/loginAsset.png" VerticalAlignment="Center" Margin="0,100"/>
+            <TextBlock Foreground="White" FontFamily="poppins" FontSize="28" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Margin="0,-100,0,0" ><Run Text="UnitySpace"/></TextBlock>
+            <TextBlock Foreground="White" FontFamily="poppins" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Margin="45,0,51,0">
+                 UnitySpace is an innovative collaborative meeting application designed to simplify and streamline the way teams communicate and work together. In today's fast-paced business environment, organizations need a reliable platform that can connect team members, regardless of their physical location, to ensure effective collaboration and decision-making.
             </TextBlock>
         </StackPanel>
 
