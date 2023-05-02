@@ -93,6 +93,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Chef_Index.xaml.cs">
+      <DependentUpon>Chef_Index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Comfirmed_meeting.xaml.cs">
+      <DependentUpon>Comfirmed_meeting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Create_meeting.xaml.cs">
+      <DependentUpon>Create_meeting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="empty_meetings.xaml.cs">
+      <DependentUpon>empty_meetings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="meeting.xaml.cs">
+      <DependentUpon>meeting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="member_index.xaml.cs">
+      <DependentUpon>member_index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="upcoming_meeting.xaml.cs">
+      <DependentUpon>upcoming_meeting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Page Include="Chef_Index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Comfirmed_meeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Create_meeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="empty_meetings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,6 +143,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="meeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="member_index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="upcoming_meeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -141,6 +191,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\logo2.png" />
+    <Resource Include="Images\exit %281%29.png" />
+    <Resource Include="Images\check-box.png" />
+    <Resource Include="Images\multiply.png" />
+    <Resource Include="Images\profiles\fenabdel.jpg" />
+    <Resource Include="Images\notification.png" />
+    <Resource Include="Images\add %281%29.png" />
+    <Resource Include="Images\profiles\youssef.jpg" />
+    <Resource Include="Images\profiles\faycal.jpg" />
+    <Resource Include="Images\cross %281%29.png" />
     <Content Include="User.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -161,6 +221,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

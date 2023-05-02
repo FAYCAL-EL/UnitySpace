@@ -20,9 +20,6 @@ using System.IO;
 
 namespace UnitySpace
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
@@ -33,9 +30,9 @@ namespace UnitySpace
     
         }
 
-        private Boolean Login(String email,String password) 
+        private User Login(String email,String password) 
         {
-            
+            User user;
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -43,16 +40,24 @@ namespace UnitySpace
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
+                int id = reader.GetInt32(0);
+                string nom =reader.GetString(1);
+                string prenom = reader.GetString(2);
+                string mail  = reader.GetString(3);
+                string post =   reader.GetString(5);
+                string pwd =    reader.GetString(4);
+                string profil = reader.GetString(6);
+                user = new User(id,nom,prenom,pwd,mail,post,profil);
                 connection.Close();
-                return true;
+                
             }
             else
             {
+                user = null;
                 connection.Close();
-                return false;
 
             }
-
+            return user;
 
 
 
@@ -60,14 +65,28 @@ namespace UnitySpace
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(Login(identifactionLabel.Text.ToString(), passwordLabel.Password))
+            User user = Login(identifactionLabel.Text.ToString(), passwordLabel.Password);
+            if ( user != null)
             {
-                Console.WriteLine("login succesfully");
+                if (user.Post.Equals("chef"))
+                {
+                    Chef_Index ci = new Chef_Index(user);
+                    ci.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    member_index mi = new member_index(user);
+                    mi.Show();
+                    this.Hide();
+                }
+                
             }
             else
             {
 
                 notification.Content = "Identification or password incorrect";
+                notifpic.Visibility = Visibility.Visible;
                 identifactionLabel.Text = "";
                 passwordLabel.Password = "";
                 

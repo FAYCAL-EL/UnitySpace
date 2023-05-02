@@ -28,8 +28,11 @@
                     <SolidColorBrush Color="White" Opacity="0"/>
                 </Button.BorderBrush>
             </Button>
+            <StackPanel Orientation="Horizontal" Margin="91,30,0,0">
+                <Image Name="notifpic" Source="Images/multiply.png" Visibility="Hidden" Width="15"></Image>
+                <Label  Name="notification" FontFamily="poppins"  Foreground="red" Margin="10,0,0,0"> </Label>
 
-            <Label  Name="notification" FontFamily="poppins" Margin="91,30,0,0" Foreground="red"></Label>
+            </StackPanel>
 
 
         </StackPanel>

@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="UnitySpace.Comfirmed_meeting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UnitySpace"
+             mc:Ignorable="d" 
+             FontFamily="poppins"
+             d:DesignHeight="620" d:DesignWidth="754.5">
+    <Grid Background="#fff">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock FontWeight="Bold" FontSize="23" Margin=" 62,28,0,0">Comfirmed Meetings</TextBlock>
+            <Label Margin=" 62,10,0,0">Here is the list of your comfimed meeting</Label>
+        </StackPanel>
+        <ContentControl x:Name="ContentC" Grid.Row="1" Width="754.5" Height="500" />
+
+    </Grid>
+</UserControl>

@@ -60,3 +60,17 @@ F:\Study\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.CoreCompileInputs.cac
 F:\Study\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.CopyComplete
 F:\Study\UnitySpace\UnitySpace\obj\Debug\UnitySpace.exe
 F:\Study\UnitySpace\UnitySpace\obj\Debug\UnitySpace.pdb
+F:\Study\UnitySpace\UnitySpace\obj\Debug\Chef_Index.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\Chef_Index.baml
+F:\Study\UnitySpace\UnitySpace\obj\Debug\Create_meeting.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\meeting.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\upcoming_meeting.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\Create_meeting.baml
+F:\Study\UnitySpace\UnitySpace\obj\Debug\meeting.baml
+F:\Study\UnitySpace\UnitySpace\obj\Debug\upcoming_meeting.baml
+F:\Study\UnitySpace\UnitySpace\obj\Debug\member_index.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\member_index.baml
+F:\Study\UnitySpace\UnitySpace\obj\Debug\Comfirmed_meeting.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\Comfirmed_meeting.baml
+F:\Study\UnitySpace\UnitySpace\obj\Debug\empty_meetings.g.cs
+F:\Study\UnitySpace\UnitySpace\obj\Debug\empty_meetings.baml
