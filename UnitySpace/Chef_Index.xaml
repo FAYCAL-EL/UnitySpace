@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         FontFamily="poppins"
        
-        Title="Chef | UnitySpace" Height="720" Width="1012.5">
+        Title="Chef | UnitySpace" Height="720" Width="1012.5" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="258"/>
