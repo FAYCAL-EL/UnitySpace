@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         FontFamily="poppins"
        
-        Title="Member | UnitySpace" Height="720" Width="1012.5" ResizeMode="NoResize">
+        Title="Member | UnitySpace" Height="720" Width="1012.5" ResizeMode="NoResize"  LocationChanged="MainWindow_LocationChanged">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="258"/>
@@ -62,7 +62,7 @@
                         </Grid.ColumnDefinitions>
                         
                         <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="notif" Height="20" Width="20" BorderThickness="0" BorderBrush="{x:Null}" Padding="0,0,0,0" HorizontalAlignment="Right" >
+                            <Button Name="notif" Height="20" Width="20" BorderThickness="0" BorderBrush="{x:Null}" Padding="0,0,0,0" HorizontalAlignment="Right" Click="ButtonNotif_Click" >
                                 <Button.Background>
                                     <ImageBrush ImageSource="Images/notification.png"/>
                                 </Button.Background>
@@ -72,6 +72,39 @@
                                     </Border>
                                 </StackPanel>
                             </Button>
+
+                            <Popup x:Name="NotificationPopup" StaysOpen="True" PlacementTarget="{Binding ElementName=notif}" Width="270" AllowsTransparency="True">
+                                <Border  BorderThickness="3">
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="10" Opacity="0.2"/>
+                                    </Border.Effect>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Row="0" Background="#3880FF">
+                                            <Grid Grid.Row="0" Background="#3880FF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="50"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Name="notifBarCounter" Foreground="White" VerticalAlignment="Center" TextAlignment="Center" FontSize="16"/>
+                                            </Grid>
+
+                                        </StackPanel>
+                                        <StackPanel x:Name="notifactionContent" Grid.Row="1" Background="white">
+
+
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
                         </StackPanel>
                         <StackPanel Grid.Column="2" VerticalAlignment="Center" >
 

@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/fenabdel.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/youssef.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/faycal.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("user.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("user_log.ldf")]
 

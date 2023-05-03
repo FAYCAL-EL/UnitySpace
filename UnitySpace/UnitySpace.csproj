@@ -117,6 +117,9 @@
       <DependentUpon>upcoming_meeting.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="NotificationUI.xaml.cs">
+      <DependentUpon>NotificationUI.xaml</DependentUpon>
+    </Compile>
     <Page Include="Chef_Index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="upcoming_meeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NotificationUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,11 +204,17 @@
     <Resource Include="Images\exit %281%29.png" />
     <Resource Include="Images\check-box.png" />
     <Resource Include="Images\multiply.png" />
-    <Resource Include="Images\profiles\fenabdel.jpg" />
+    <Content Include="Images\profiles\fenabdel.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Images\notification.png" />
     <Resource Include="Images\add %281%29.png" />
-    <Resource Include="Images\profiles\youssef.jpg" />
-    <Resource Include="Images\profiles\faycal.jpg" />
+    <Content Include="Images\profiles\youssef.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profiles\faycal.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Images\cross %281%29.png" />
     <Content Include="User.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
