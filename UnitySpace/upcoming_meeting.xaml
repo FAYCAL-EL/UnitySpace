@@ -5,8 +5,36 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UnitySpace"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Yellow">
-            
+             FontFamily="Poppins"
+             d:DesignHeight="624" d:DesignWidth="800">
+    <Grid Background="white" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <TextBlock HorizontalAlignment="Left" Margin="63,126,0,0" TextWrapping="Wrap" Text="Meetings" VerticalAlignment="Top" Height="34" Width="212" FontSize="22.5" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,168,0,0" TextWrapping="Wrap" Text="Here is the list of your upcoming  meetings" VerticalAlignment="Top" FontSize="11.5" />
+        <Button Height="50" Margin="63,200,100,281">
+            <StackPanel Orientation="Horizontal">
+                <Image HorizontalAlignment="Left" Source="Images/check-box.png" Width="18"></Image>
+                <Label Foreground="#fff" Margin="10,0,0,0"  >RH Meetings I : new RH strategie</Label>
+                <Image HorizontalAlignment="Right" Source="Images/exit (1).png" Width="18" Margin="300,0,0,0"></Image>
+            </StackPanel>
+
+            <Button.Background>
+                <SolidColorBrush Color="Gray" Opacity="10"/>
+            </Button.Background>
+        </Button>
+        <Button Height="50" Margin="63,200,100,100">
+            <StackPanel Orientation="Horizontal">
+                <Image HorizontalAlignment="Left" Source="Images/check-box.png" Width="18" ></Image>
+                <Label HorizontalAlignment="Left" Foreground="#fff" Margin="10,0,0,0"  >RH Meetings I : new RH strategie</Label>
+                <Image HorizontalAlignment="Right" Source="Images/exit (1).png" Width="18" Margin="300,0,0,0"></Image>
+            </StackPanel>
+
+            <Button.Background>
+                <SolidColorBrush Color="red" Opacity="10"/>
+            </Button.Background>
+        </Button>
+
+
+
     </Grid>
 </UserControl>

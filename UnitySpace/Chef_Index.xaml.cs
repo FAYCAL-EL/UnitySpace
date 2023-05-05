@@ -80,9 +80,9 @@ namespace UnitySpace
         {
             CC.Content = new upcoming_meeting();
         }
-        private void meeting(object sender, RoutedEventArgs e)
+        private void History_meeting(object sender, RoutedEventArgs e)
         {
-            CC.Content = new meeting();
+            CC.Content = new History_meeting();
         }
        
         private void logout(object sender, RoutedEventArgs e)

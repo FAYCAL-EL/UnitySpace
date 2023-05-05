@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3700570B-050E-4760-B767-9B4EEE1E5D20}</ProjectGuid>
+    <ProjectGuid>{7AE3AA49-C072-4CF2-A672-8004B6183CB1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>UnitySpace</RootNamespace>
     <AssemblyName>UnitySpace</AssemblyName>
@@ -56,10 +57,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\tp\tp3\gestionDesEtudient\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\tp\tp3\gestionDesEtudient\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignColors, Version=2.1.2.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.2\lib\net462\MaterialDesignColors.dll</HintPath>
@@ -95,6 +96,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Absence.xaml.cs">
+      <DependentUpon>Absence.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chef_Index.xaml.cs">
       <DependentUpon>Chef_Index.xaml</DependentUpon>
     </Compile>
@@ -106,6 +110,9 @@
     </Compile>
     <Compile Include="empty_meetings.xaml.cs">
       <DependentUpon>empty_meetings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="History_meeting.xaml.cs">
+      <DependentUpon>History_meeting.xaml</DependentUpon>
     </Compile>
     <Compile Include="meeting.xaml.cs">
       <DependentUpon>meeting.xaml</DependentUpon>
@@ -120,6 +127,10 @@
     <Compile Include="NotificationUI.xaml.cs">
       <DependentUpon>NotificationUI.xaml</DependentUpon>
     </Compile>
+    <Page Include="Absence.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Chef_Index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +146,10 @@
     <Page Include="empty_meetings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="History_meeting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -244,5 +259,8 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\..\..\..\CI2\UnitySpace\UnitySpace\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
