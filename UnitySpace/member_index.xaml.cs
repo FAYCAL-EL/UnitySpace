@@ -25,6 +25,7 @@ namespace UnitySpace
     {
         private User _user;
         public int count = 0;
+        
         static int numbOfNotif = 2;
         public member_index(User user)
         {

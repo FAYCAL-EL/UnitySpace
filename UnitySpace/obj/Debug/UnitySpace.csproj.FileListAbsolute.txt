@@ -217,3 +217,5 @@ D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\UnitySpace.exe
 D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\UnitySpace.pdb
 D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Absence.g.cs
 D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Absence.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\UnitySpace.exe
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\UnitySpace.pdb
