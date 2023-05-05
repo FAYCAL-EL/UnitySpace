@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3700570B-050E-4760-B767-9B4EEE1E5D20}</ProjectGuid>
+    <ProjectGuid>{7AE3AA49-C072-4CF2-A672-8004B6183CB1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>UnitySpace</RootNamespace>
     <AssemblyName>UnitySpace</AssemblyName>
@@ -95,6 +95,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Absence.xaml.cs">
+      <DependentUpon>Absence.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chef_Index.xaml.cs">
       <DependentUpon>Chef_Index.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
     <Compile Include="NotificationUI.xaml.cs">
       <DependentUpon>NotificationUI.xaml</DependentUpon>
     </Compile>
+    <Page Include="Absence.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Chef_Index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
