@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,65 +26,74 @@ namespace UnitySpace
 
     public partial class member_index : Window
     {
-        private User _user;
-        public int count = 0;
-        static int numbOfNotif = 2;
-        public member_index(User user)
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        static public User user;
+        static int count = 0;
+        static public ContentControl home;
+        static int numbOfNotif = 0;
+        static public Popup popUp;
+        public member_index(User userI)
         {
             InitializeComponent();
-            _user = user;
+            user = userI;
             string profile = user.Profil;
+            home = membreC;
+            popUp = NotificationPopup;
             string image_path = "Images/profiles/" + profile;
             profil.Source = new BitmapImage(new Uri(image_path, UriKind.Relative));
+
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select (idMeeting) from [meeting_member] where idMember='"+user.Id+"'";
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            /*numbOfNotif = reader.Cast<Object>().Count();*/
             notifBullet.Text = numbOfNotif.ToString();
             notifBarCounter.Text = numbOfNotif.ToString() + " notification" + (numbOfNotif > 1 ? "s" : "");
-            String imagePath = @"Images/profiles/faycal.jpg";
-            String title = "RH MEETING  : new RH strategie";
-            String chefT = "Chef RH Team";
-            String date = "22-10-2023 08:52";
-            NotificationUI ui = new NotificationUI(title, imagePath, chefT, date, true);
-            notifactionContent.Children.Add(ui);
 
-            String imagePath1 = @"Images/profiles/youssef.jpg";
-            String title1 = "RH MEETING  : new RH strategie";
-            String chefT1 = "Chef RH Team";
-            String date1 = "22-10-2023 08:52";
-            NotificationUI ui1 = new NotificationUI(title1, imagePath1, chefT1, date1, false);
-            notifactionContent.Children.Add(ui1);
+            while (reader.Read())
+            {
+                Console.WriteLine("hello");
+                notifactionContent.Children.Add(new NotificationUI(reader.GetInt32(0)));
+            }
+
+            connection.Close();
 
         }
 
 
-        private void MainWindow_LocationChanged(object sender, EventArgs e)
+        public void MainWindow_LocationChanged(object sender, EventArgs e)
         {
-            NotificationPopup.IsOpen = false;
+            popUp.IsOpen = false;
         }
 
         private void ButtonNotif_Click(object sender, RoutedEventArgs e)
         {
 
-            if (!NotificationPopup.IsOpen)
+            if (!popUp.IsOpen)
             {
                 NotificationPopup.DataContext = "You have a new notification!";
                 NotificationPopup.HorizontalOffset = NotificationPopup.Width / 3;
                 NotificationPopup.VerticalOffset = 10;
-                NotificationPopup.IsOpen = true;
+                popUp.IsOpen = true;
 
             }
             else
             {
-                NotificationPopup.IsOpen = false;
+                popUp.IsOpen = false;
             }
 
 
         }
         private void comfirmed_meeting(object sender, RoutedEventArgs e)
         {
-            membreC.Content = new Comfirmed_meeting(count);
+            home.Content = new Comfirmed_meeting(count);
         }
         private void logout(object sender, RoutedEventArgs e)
         {
-            _user = null;
+            user = null;
+            MainWindow_LocationChanged(sender,e);
             MainWindow mw = new MainWindow();
             mw.Show();
             this.Hide();

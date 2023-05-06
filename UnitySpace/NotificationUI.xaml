@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:UnitySpace"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <Button Background="{x:Null}" Width="270" Height="50" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">
+        
     <Grid Width="270" Height="50">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>
@@ -32,7 +34,7 @@
                             <ColumnDefinition Width="*" MinWidth="70"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" >
-                            <TextBlock x:Name="chefTitle" FontWeight="Bold" Margin="5,0,15,0" />
+                            <TextBlock x:Name="chefTitle" Foreground="Black" FontWeight="Bold" Margin="5,0,15,0" />
                         </StackPanel>
                         <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
                             <Border Name="NotifisRead" CornerRadius="7" Width="7" Height="7" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -44,10 +46,11 @@
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="1">
-                    <TextBlock x:Name="notificationTitle" FontSize="9" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="notificationTitle" Foreground="Black" FontSize="9" Margin="5,0,0,0"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
 
-    </Grid>
+        </Grid>
+    </Button>
 </UserControl>

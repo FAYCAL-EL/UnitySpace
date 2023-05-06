@@ -116,6 +116,12 @@
     <Compile Include="member_index.xaml.cs">
       <DependentUpon>member_index.xaml</DependentUpon>
     </Compile>
+    <Compile Include="participantIcon.xaml.cs">
+      <DependentUpon>participantIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showMeeting.xaml.cs">
+      <DependentUpon>showMeeting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="upcoming_meeting.xaml.cs">
       <DependentUpon>upcoming_meeting.xaml</DependentUpon>
     </Compile>
@@ -160,6 +166,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="member_index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="participantIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showMeeting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +225,7 @@
     <Resource Include="Images\exit %281%29.png" />
     <Resource Include="Images\check-box.png" />
     <Resource Include="Images\multiply.png" />
+    <Resource Include="Images\back.png" />
     <Content Include="Images\profiles\fenabdel.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
