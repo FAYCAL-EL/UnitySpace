@@ -119,6 +119,12 @@
     <Compile Include="participantIcon.xaml.cs">
       <DependentUpon>participantIcon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Participant.xaml.cs">
+      <DependentUpon>Participant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="part_pic.xaml.cs">
+      <DependentUpon>part_pic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="showMeeting.xaml.cs">
       <DependentUpon>showMeeting.xaml</DependentUpon>
     </Compile>
@@ -170,6 +176,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="participantIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Participant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="part_pic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,6 +240,8 @@
     <Resource Include="Images\check-box.png" />
     <Resource Include="Images\multiply.png" />
     <Resource Include="Images\back.png" />
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\close.png" />
     <Content Include="Images\profiles\fenabdel.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -238,6 +254,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Images\cross %281%29.png" />
+    <Resource Include="Images\search.png" />
+    <Resource Include="Images\plus.png" />
     <Content Include="User.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

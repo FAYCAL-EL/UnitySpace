@@ -9,63 +9,117 @@
              FontFamily="Poppins"
              d:DesignHeight="624" d:DesignWidth="800">
     <Grid Background="white">
-        <Image Source="/Images/cross (1).png" Margin="61,7,725,0" Height="17" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="96,7,0,0" TextWrapping="Wrap" Text="Back" FontSize="14" VerticalAlignment="Top" Width="104"/>
-        <TextBlock HorizontalAlignment="Left" Margin="63,37,0,0" TextWrapping="Wrap" Text="Create Meeting" VerticalAlignment="top" Height="34" Width="179" FontSize="22.5" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="63,83,0,0" TextWrapping="Wrap" Text="Meeting Title : " VerticalAlignment="Top" FontSize="11.5"/>
-        <TextBox BorderThickness="1"  HorizontalAlignment="Left" Height="25" Margin="63,101,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
-        <TextBlock HorizontalAlignment="Left" Margin="63,139,0,0" TextWrapping="Wrap" Text="Meeting Description : " VerticalAlignment="Top" FontSize="11.5"/>
-        <TextBox BorderThickness="1" HorizontalAlignment="Left" Height="67" Margin="63,163,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
-        <TextBlock HorizontalAlignment="Left" Margin="63,257,0,0" TextWrapping="Wrap" Text="Meeting starting Date : " VerticalAlignment="Top" FontSize="11.5"/>
-        <DatePicker HorizontalAlignment="Left" Height="24" Margin="63,276,0,0" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,0.5">
-            <DatePicker.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </DatePicker.RenderTransform>
-        </DatePicker>
-        <TextBlock HorizontalAlignment="Left" Margin="423,257,0,0" TextWrapping="Wrap" Text="Meeting Ending Date : " VerticalAlignment="Top" FontSize="11.5"/>
-        <DatePicker HorizontalAlignment="Left" Height="24" Margin="423,276,0,0" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,0.5">
-            <DatePicker.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </DatePicker.RenderTransform>
-        </DatePicker>
-        <TextBlock HorizontalAlignment="Left" Margin="63,325,0,0" TextWrapping="Wrap" Text="Select Room : " VerticalAlignment="Top" FontSize="11.5"/>
-        <ComboBox HorizontalAlignment="Left" Margin="63,358,0,0" VerticalAlignment="Top" Width="275"/>
-        <TextBlock HorizontalAlignment="Left" Margin="423,325,0,0" TextWrapping="Wrap" Text="Select Material : " VerticalAlignment="Top" FontSize="11.5"/>
-        <ComboBox HorizontalAlignment="Left" Margin="423,358,0,0" VerticalAlignment="Top" Width="275">
+        <Button Margin="0,1,0,591" Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Click="Button_Click" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/back.png"  Height="17" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" FontSize="14" VerticalAlignment="Top" Width="104" Foreground="#DD000000"><Run Language="fr-fr" Text="   "/><Run Text="Back"/></TextBlock>
+
+            </StackPanel>
+
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="63,47,0,0" TextWrapping="Wrap" Text="Create Meeting" VerticalAlignment="Top" Height="34" Width="179" FontSize="22.5" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,93,0,0" TextWrapping="Wrap" Text="Meeting Title : " VerticalAlignment="Top" FontSize="11.5"/>
+        <TextBox BorderThickness="1"  HorizontalAlignment="Left" Height="25" Margin="63,111,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
+        <TextBlock HorizontalAlignment="Left" Margin="63,149,0,0" TextWrapping="Wrap" Text="Meeting Description : " VerticalAlignment="Top" FontSize="11.5"/>
+        <TextBox BorderThickness="1" HorizontalAlignment="Left" Height="67" Margin="63,173,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
+        <TextBlock HorizontalAlignment="Left" Margin="63,277,0,0" TextWrapping="Wrap" Text="Meeting starting Date : " VerticalAlignment="Top" FontSize="11.5"/>
+        <DatePicker HorizontalAlignment="Left" Height="24" Margin="63,296,0,0" Width="221" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="423,277,0,0" TextWrapping="Wrap" Text="Meeting Ending Date : " VerticalAlignment="Top" FontSize="11.5"/>
+        <DatePicker HorizontalAlignment="Left" Height="24" Margin="423,296,0,0" Width="221" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,355,0,0" TextWrapping="Wrap" Text="Select Room : " VerticalAlignment="Top" FontSize="11.5"/>
+        <ComboBox HorizontalAlignment="Left" Margin="63,377,0,0" VerticalAlignment="Top" Width="275"/>
+        <TextBlock HorizontalAlignment="Left" Margin="423,355,0,0" TextWrapping="Wrap" Text="Select Material : " VerticalAlignment="Top" FontSize="11.5"/>
+        <ComboBox HorizontalAlignment="Left" Margin="423,377,0,0" VerticalAlignment="Top" Width="275">
             <materialDesign:DataGridTextColumn/>
         </ComboBox>
-        <Image Source="Images/cross (1).png" Margin="63,404,720,0" Height="21" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="99,404,0,0" TextWrapping="Wrap" Text="add Paticipant" VerticalAlignment="Top" Width="104"/>
-        <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True" Margin="89,460,0,0">
-            <Border.Background>
-                <ImageBrush x:Name="chefImage" ImageSource="Images/Profiles/faycal.jpg" />
-            </Border.Background>
-        </Border>
-        <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True" Margin="133,460,0,0">
-            <Border.Background>
-                <ImageBrush x:Name="chefImage1" ImageSource="/Images/profiles/faycal.jpg" />
-            </Border.Background>
-        </Border>
-        <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True" Margin="175,460,0,0">
-            <Border.Background>
-                <ImageBrush x:Name="chefImage2" ImageSource="/Images/profiles/faycal.jpg" />
-            </Border.Background>
-        </Border>
-        <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True" Margin="219,460,0,0">
-            <Border.Background>
-                <ImageBrush x:Name="chefImage3" ImageSource="/Images/profiles/faycal.jpg" />
-            </Border.Background>
-        </Border>
-        <Button Content="Create" Background="#0ACA85" HorizontalAlignment="Left" Height="39" Margin="578,526,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.521,0.462"/>
+        <Button x:Name="add" Margin="70,413,0,179" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Click="Buttonparti_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Images/add.png" Height="21" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <TextBlock Height="21"  TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Foreground="#DD000000"><Run Language="fr-fr" Text="     "/><Run Text="add Paticipant"/></TextBlock>
+            </StackPanel>
+        </Button>
+        <StackPanel x:Name="participants_pic" Orientation="Horizontal" Height="50" Margin="64,467,-64,107">
+
+
+        </StackPanel>
+
+        <Button Content="Create" Background="#0ACA85" HorizontalAlignment="Left" Height="39" Margin="578,526,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.521,0.462" BorderBrush="{x:Null}"/>
+
+        <Popup x:Name="ParticipantPopup" IsOpen="False" StaysOpen="True" Width="660" Height="360" AllowsTransparency="True" PlacementTarget="{Binding ElementName=add}" VerticalOffset="0" HorizontalOffset="330">
+            <Border  BorderThickness="3">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Opacity="0.2"/>
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Background="#18206F" >
+                        <Grid Grid.Row="0" Background="#18206F" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="200"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20,0">
+                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="close_popup">
+                                    <Image Source="Images/close.png" Width="10" ></Image>
+                                </Button>
+
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Margin="20,0">
+                                <Label Content="Search" Foreground="#fff"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0"     >
+                                        <TextBox Name="searched_name" BorderBrush="White" Height="30" VerticalAlignment="Center"></TextBox>
+
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1">
+                                        <Button Background="#fff" BorderBrush="White" Width="30" Height="30">
+                                            <Image Source="Images/search.png" Width="15"></Image>
+                                        </Button>
+                                    </StackPanel>
+                                </Grid>
+
+                            </StackPanel>
+                            <StackPanel x:Name="participants_box" Grid.Row="2" Margin="20,0">
+
+                            </StackPanel>
+                            <StackPanel Grid.Row="3">
+                                <Button Width="117" Height="38" Background="#0ACA85" Margin="20,0,40,20" BorderBrush="{x:Null}" HorizontalAlignment="Right" Click="add_parts">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Image Source="Images/plus.png" Width="10" Height="10"></Image>
+                                        <TextBlock Margin="10,0,0,0" Foreground="#fff">Add</TextBlock>
+                                    </StackPanel>
+
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+
+
+                </Grid>
+            </Border>
+        </Popup>
     </Grid>
 </UserControl>

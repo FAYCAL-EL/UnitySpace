@@ -31,7 +31,7 @@ namespace UnitySpace
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT title, sendDate, chefTitle, profil, isRead FROM [meetings], [meeting_member], [User] WHERE [meetings].meeting_id='" + id + "' AND [User].Id=meetings.chef AND [meeting_member].idMeeting ='" + id + "' AND [meeting_member].idMember ='" + member_index.user.Id + "'";
+            cmd.CommandText = "SELECT title, sendDate, Title, profil, isRead FROM [meetings], [meeting_member], [User] WHERE [meetings].meeting_id='" + id + "' AND [User].Id=meetings.chef AND [meeting_member].idMeeting ='" + id + "' AND [meeting_member].idMember ='" + member_index.user.Id + "'";
             /*"select (title,sendDate,chefTitle,profil,isRead) from [meetings],[meeting_member],[User] where meetings.meeting_id='" + id + "' and User.Id=meetings.chef and meeting_member.idMeeting ='"+id+"' and meeting_member.idMember ='"+member_index.user.Id+"'";*/
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
