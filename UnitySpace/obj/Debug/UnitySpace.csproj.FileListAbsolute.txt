@@ -331,3 +331,11 @@ E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Deb
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\part_pic.g.cs
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Participant.baml
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\part_pic.baml
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\participantIcon.g.cs
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Participant.g.cs
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\part_pic.g.cs
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\showMeeting.g.cs
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\participantIcon.baml
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Participant.baml
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\part_pic.baml
+D:\bigfiles\DotNet\UnitySpace\UnitySpace\UnitySpace\obj\Debug\showMeeting.baml

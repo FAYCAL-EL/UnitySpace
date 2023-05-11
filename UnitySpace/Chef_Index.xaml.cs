@@ -78,11 +78,11 @@ namespace UnitySpace
         }
         private void upcoming_meeting(object sender, RoutedEventArgs e)
         {
-            CC.Content = new upcoming_meeting();
+            CC.Content = new upcoming_meeting(_user.Id);
         }
         private void meeting(object sender, RoutedEventArgs e)
         {
-            CC.Content = new meeting();
+            CC.Content = new meeting(_user.Id);
         }
        
         private void logout(object sender, RoutedEventArgs e)
