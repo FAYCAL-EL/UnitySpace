@@ -46,10 +46,19 @@ namespace UnitySpace
                     /*reader.GetString(3);*/
             }
 
-            participants.Children.Add(new participantIcon());
-            participants.Children.Add(new participantIcon());
-            participants.Children.Add(new participantIcon());
-            
+            reader.Close();
+            SqlCommand cmdM = connection.CreateCommand();
+            cmdM.CommandType = CommandType.Text;
+            cmdM.CommandText = "SELECT idMember FROM [meeting_member] WHERE [meeting_member].idMeeting='" + id + "'";
+            SqlDataReader readerM = cmdM.ExecuteReader();
+
+            while (readerM.Read())
+            {
+                participants.Children.Add(new participantIcon(readerM.GetInt32(0)));
+            }
+
+
+
             connection.Close();
 
         }
@@ -57,7 +66,7 @@ namespace UnitySpace
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             member_index.popUp.IsOpen = false;
-            member_index.home.Content = new Comfirmed_meeting(0);
+            member_index.home.Content = new Comfirmed_meeting();
         }
 
         private void confirm_btn(object sender, RoutedEventArgs e)
@@ -75,13 +84,13 @@ namespace UnitySpace
             connection.Close();
 
 
-            member_index.home.Content = new Comfirmed_meeting(0);
+            member_index.home.Content = new Comfirmed_meeting();
         }
 
         private void cancel_btn(object sender, RoutedEventArgs e)
         {
             
-            member_index.home.Content = new Comfirmed_meeting(0);
+            member_index.home.Content = new Comfirmed_meeting();
         }
 
 

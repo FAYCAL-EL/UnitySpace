@@ -28,10 +28,11 @@ namespace UnitySpace
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
         static public User user;
-        static int count = 0;
+       
         static public ContentControl home;
         static int numbOfNotif = 0;
         static public Popup popUp;
+        static public StackPanel popUpContent; 
         public member_index(User userI)
         {
             InitializeComponent();
@@ -39,13 +40,19 @@ namespace UnitySpace
             string profile = user.Profil;
             home = membreC;
             popUp = NotificationPopup;
+            popUpContent = notifactionContent;
             string image_path = "Images/profiles/" + profile;
             profil.Source = new BitmapImage(new Uri(image_path, UriKind.Relative));
 
+        }
+
+
+        private void fetcheingDataIntoPopUp()
+        {
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select (idMeeting) from [meeting_member] where idMember='"+user.Id+"'";
+            cmd.CommandText = "select (idMeeting) from [meeting_member] where idMember='" + user.Id + "'";
             SqlDataReader reader = cmd.ExecuteReader();
 
             /*numbOfNotif = reader.Cast<Object>().Count();*/
@@ -55,17 +62,17 @@ namespace UnitySpace
             while (reader.Read())
             {
                 Console.WriteLine("hello");
-                notifactionContent.Children.Add(new NotificationUI(reader.GetInt32(0)));
+                popUpContent.Children.Add(new NotificationUI(reader.GetInt32(0)));
             }
 
             connection.Close();
-
         }
 
 
-        public void MainWindow_LocationChanged(object sender, EventArgs e)
+         public void MainWindow_LocationChanged(object sender, EventArgs e)
         {
             popUp.IsOpen = false;
+            popUpContent.Children.Clear();
         }
 
         private void ButtonNotif_Click(object sender, RoutedEventArgs e)
@@ -73,7 +80,7 @@ namespace UnitySpace
 
             if (!popUp.IsOpen)
             {
-                NotificationPopup.DataContext = "You have a new notification!";
+                fetcheingDataIntoPopUp();
                 NotificationPopup.HorizontalOffset = NotificationPopup.Width / 3;
                 NotificationPopup.VerticalOffset = 10;
                 popUp.IsOpen = true;
@@ -81,14 +88,15 @@ namespace UnitySpace
             }
             else
             {
-                popUp.IsOpen = false;
+                MainWindow_LocationChanged(sender, e);
+
             }
 
 
         }
         private void comfirmed_meeting(object sender, RoutedEventArgs e)
         {
-            home.Content = new Comfirmed_meeting(count);
+            home.Content = new Comfirmed_meeting();
         }
         private void logout(object sender, RoutedEventArgs e)
         {

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,21 @@ namespace UnitySpace
     /// </summary>
     public partial class participantIcon : UserControl
     {
-        public participantIcon()
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        public participantIcon(int id)
         {
             InitializeComponent();
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT profil FROM [User] WHERE [User].Id='" + id + "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string imagePath = "Images/profiles/" + reader.GetString(0);
+                participant.ImageSource = new BitmapImage(new Uri(imagePath, UriKind.Relative));
+
+            }
         }
     }
 }

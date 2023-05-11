@@ -9,8 +9,8 @@
     
         <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True" Margin="5">
             <Border.Background>
-                <ImageBrush x:Name="chefImdage" ImageSource="Images/Profiles/faycal.jpg" />
-            </Border.Background>
+            <ImageBrush x:Name="participant" />
+        </Border.Background>
         </Border>
     
 </UserControl>

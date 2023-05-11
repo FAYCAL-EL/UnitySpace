@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +22,22 @@ namespace UnitySpace
     /// </summary>
     public partial class Comfirmed_meeting : UserControl
     {
-        public Comfirmed_meeting(int count)
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        public Comfirmed_meeting()
         {
             InitializeComponent();
-            if (count == 0) {
+
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select (idMeeting) from [meeting_member] where idMember='" + member_index.user.Id + "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (!reader.HasRows) {
                 ContentC.Content = new empty_meetings();
+            }
+            else
+            {
+                Console.WriteLine("hna khas ydar loop bach y tinstanci les meeting");
             }
         }
     }

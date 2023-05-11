@@ -327,3 +327,7 @@ F:\UnitySpace\UnitySpace\obj\Debug\Participant.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\Participant.baml
 F:\UnitySpace\UnitySpace\obj\Debug\part_pic.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\part_pic.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Participant.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\part_pic.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Participant.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\part_pic.baml
