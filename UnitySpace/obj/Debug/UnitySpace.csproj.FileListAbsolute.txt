@@ -233,7 +233,6 @@ E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Deb
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Debug\Microsoft.Xaml.Behaviors.xml
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.AssemblyReference.cache
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.SuggestedBindingRedirects.cache
-E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Absence.g.cs
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Chef_Index.g.cs
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Comfirmed_meeting.g.cs
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Create_meeting.g.cs
@@ -248,7 +247,6 @@ E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Deb
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\UnitySpace_MarkupCompile.cache
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\UnitySpace_MarkupCompile.lref
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\App.baml
-E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Absence.baml
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Chef_Index.baml
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Comfirmed_meeting.baml
 E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Create_meeting.baml
@@ -404,3 +402,13 @@ F:\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Chef.baml
 F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ayoub.jpg
 F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ghazali.jpg
 F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\maysaa.jpg
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Absent.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Chef.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ayoub.jpg
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ghazali.jpg
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Debug\Images\profiles\maysaa.jpg
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Absent.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Chef.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Debug\Images\profiles\admin.jpg

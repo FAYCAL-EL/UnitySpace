@@ -16,7 +16,9 @@
             <TextBlock FontWeight="Bold" FontSize="23" Margin=" 62,28,0,0">Comfirmed Meetings</TextBlock>
             <Label Margin=" 62,10,0,0">Here is the list of your comfimed meeting</Label>
         </StackPanel>
-        <ContentControl x:Name="ContentC" Grid.Row="1" Width="754.5" Height="500" />
+        <ContentControl x:Name="ContentC" Grid.Row="1" Width="754.5" Height="500" >
+            <StackPanel  Height="500" x:Name="gridstack" Width="754.5" Orientation="Vertical"/>
+        </ContentControl>
 
     </Grid>
 </UserControl>

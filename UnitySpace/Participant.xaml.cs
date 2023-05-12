@@ -22,7 +22,7 @@ namespace UnitySpace
     /// </summary>
     public partial class Participant : UserControl
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True");
         private int _id;
         public event EventHandler<string> MemberIdClicked;
         public Participant(int id)
@@ -69,6 +69,7 @@ namespace UnitySpace
         
         public void Add_participant(object sender, RoutedEventArgs e)
         {
+            part_button.IsEnabled = false;
             part_button.Background.Opacity = 0.4;
             string memberId = particpate.Tag.ToString();
             MemberIdClicked?.Invoke(this, memberId);

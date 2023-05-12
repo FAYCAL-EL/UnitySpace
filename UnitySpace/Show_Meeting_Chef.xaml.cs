@@ -23,7 +23,7 @@ namespace UnitySpace
     public partial class Show_Meeting_Chef : UserControl
     {
         private int _id;
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True");
         public Show_Meeting_Chef(int id)
         {
             _id = id;

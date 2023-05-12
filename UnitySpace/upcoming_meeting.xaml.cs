@@ -40,7 +40,7 @@ namespace UnitySpace
             List<Meeting> meetings = new List<Meeting>();
 
             // Create a new SqlConnection using the connection string
-            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True"))
             {
                 // Open the connection
                 connection.Open();

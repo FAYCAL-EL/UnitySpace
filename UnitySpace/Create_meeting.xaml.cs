@@ -26,7 +26,7 @@ namespace UnitySpace
     /// </summary>
     public partial class Create_meeting : UserControl
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True");
         public static List<int> id_members = new List<int>();
         private String meetitle;
         private String meetdesc;
@@ -115,8 +115,8 @@ namespace UnitySpace
 
         }
         private void Create(object sender, RoutedEventArgs e)
-        {
-            SqlConnection connection1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        {   
+            SqlConnection connection1 = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True");
             int meetingId;
             connection1.Open();
             meetitle = meeting_title.Text;
@@ -152,7 +152,7 @@ namespace UnitySpace
 
             foreach (int i in id_members)
             {
-                SqlConnection connection2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+                SqlConnection connection2 = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True");
 
                 string insertStatement1 = "INSERT INTO [meeting_member] (idMeeting, idMember, sendDate) VALUES (@Value1, @Value2, @Value3);";
                 using (connection2)

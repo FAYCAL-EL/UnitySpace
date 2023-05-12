@@ -36,43 +36,43 @@ namespace UnitySpace
             _id = idmember;
             InitializeComponent();
 
-                // Create a list to store the retrieved meetings
+            // Create a list to store the retrieved meetings
 
-                List<Meeting> meetings = new List<Meeting>();
+            List<Meeting> meetings = new List<Meeting>();
 
-                // Create a new SqlConnection using the connection string
-                using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True"))
+            // Create a new SqlConnection using the connection string
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True"))
+            {
+                // Open the connection
+                connection.Open();
+
+
+                string query = "SELECT title, meeting_id FROM [meetings] WHERE meeting_id IN (select idMeeting from [meeting_member] WHERE idMember ='" + _id + "' AND isComfirmed ='true')";
+
+                // Create a new SqlCommand with the query and connection
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Open the connection
-                    connection.Open();
-
-
-                    string query = "SELECT title, meeting_id FROM [meetings] WHERE meeting_id IN (select idMeeting from [meeting_member] WHERE idMember ='" + _id + "' AND isComfirmed ='true')";
-
-                    // Create a new SqlCommand with the query and connection
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    // Execute the query and retrieve the data using a SqlDataReader
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        // Execute the query and retrieve the data using a SqlDataReader
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        // Create a list to store the retrieved meetings
+
+                        // Read the data from the reader and create Meeting objects
+
+                        if (reader.HasRows)
                         {
-                            // Create a list to store the retrieved meetings
-
-                            // Read the data from the reader and create Meeting objects
-
-                            if (reader.HasRows)
+                            while (reader.Read())
                             {
-                                while (reader.Read())
-                                {
-                                    // Create a new Meeting object
-                                    Meeting meeting = new Meeting();
+                                // Create a new Meeting object
+                                Meeting meeting = new Meeting();
 
-                                    // Set the properties of the Meeting object based on the retrieved data
-                                    meeting.Title = reader.GetString(0);
-                                    meeting.thisMeetid = reader.GetInt32(1);
+                                // Set the properties of the Meeting object based on the retrieved data
+                                meeting.Title = reader.GetString(0);
+                                meeting.thisMeetid = reader.GetInt32(1);
 
-                                    // Add the Meeting object to the list
-                                    meetings.Add(meeting);
-                                }
+                                // Add the Meeting object to the list
+                                meetings.Add(meeting);
+                            }
 
                             // Now you have the list of meetings for the current chef ID
                             // You can use this list to dynamically create buttons or perform any other operations
@@ -128,33 +128,32 @@ namespace UnitySpace
                                 {
                                     this.Visibility = Visibility.Collapsed;
 
-                                    member_index.home.Content = new showMeeting(meeting.thisMeetid);
-                                 
+                                    member_index.home.Content = new Show_Meeting_Member(meeting.thisMeetid);
+
 
                                 };
 
 
                                 // Add the button to the grid
 
-                                Grid container = new Grid();
-                                container.Children.Add(button);
-                                ContentC.Content = container;
-                                //y += button.Height + 10; // add 10 for spacing between buttons
+
+                                gridstack.Children.Add(button);
+                                /*y += button.Height + 10;*/ // add 10 for spacing between buttons/**/
 
                             }
 
                         }
-                            else
-                            {
-                                ContentC.Content = new empty_meetings();
-                            }
-
+                        else
+                        {
+                            ContentC.Content = new empty_meetings();
                         }
+
                     }
                 }
+            }
 
 
-         
+
 
 
         }

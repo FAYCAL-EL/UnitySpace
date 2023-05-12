@@ -25,7 +25,7 @@ namespace UnitySpace
     public partial class showMeeting : UserControl
     {
         private int _id;
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\User.mdf;Integrated Security=True");
         public showMeeting(int id)
         {
             _id = id;
@@ -42,8 +42,8 @@ namespace UnitySpace
                 meetingTitle.Text=reader.GetString(0);
                 meetingDescription.Text = reader.GetString(1);
                 meetingDate.Text = reader.GetDateTime(2).ToString();
-                meetingPlace.Text = "Room N°15 4th Floor, National Labrary, Rabat ,Agdal , Morocco ";
-                    /*reader.GetString(3);*/
+                meetingPlace.Text = reader.GetString(3);
+                
             }
 
             reader.Close();
@@ -92,7 +92,7 @@ namespace UnitySpace
 
             member_index.home.Content = new Comfirmed_meeting(member_index.user.Id);
 
-            Absent abs = new Absent();
+            Absent abs = new Absent(_id);
             member_index.home.Content = abs;
         }
 
