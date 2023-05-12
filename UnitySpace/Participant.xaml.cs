@@ -24,13 +24,15 @@ namespace UnitySpace
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True");
         private int _id;
+        public event EventHandler<string> MemberIdClicked;
         public Participant(int id)
         {
+            
+            string hexColor;
 
             InitializeComponent();
             _id = id;
             
-
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -46,45 +48,30 @@ namespace UnitySpace
 
             }
             
-            connection.Close();
+            
             particpate.Tag = id;
+
             available.Text = "available";
             if (available.Text == "available")
             {
-                string hexColor = "#0ACA85";
-
-                Color color = (Color)ColorConverter.ConvertFromString(hexColor);
-
-                SolidColorBrush brush = new SolidColorBrush(color);
-
-                available.Foreground = brush;
-
+                hexColor = "#0ACA85";
             }
             else
             {
-                string hexColor = "#FFCA0A0A";
-
-                Color color = (Color)ColorConverter.ConvertFromString(hexColor);
-
-                SolidColorBrush brush = new SolidColorBrush(color);
-
-                available.Foreground = brush;
+                hexColor = "#FFCA0A0A";
             }
-            
+            Color color = (Color)ColorConverter.ConvertFromString(hexColor);
+            SolidColorBrush brush = new SolidColorBrush(color);
+            available.Foreground = brush;
+
+            connection.Close();
         }
         
         public void Add_participant(object sender, RoutedEventArgs e)
         {
             part_button.Background.Opacity = 0.4;
-            
-            Control control = sender as Control; // Cast the sender to Control
-            if (control != null)
-            {
-                object tagValue = control.Tag; // Get the value of the Tag property
-            }
-            
-
-
+            string memberId = particpate.Tag.ToString();
+            MemberIdClicked?.Invoke(this, memberId);
         }
 
 

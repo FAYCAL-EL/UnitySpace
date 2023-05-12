@@ -32,19 +32,7 @@ namespace UnitySpace
 
             notifBullet.Text = numbOfNotif.ToString();
             notifBarCounter.Text = numbOfNotif.ToString() + " notification" + (numbOfNotif > 1 ? "s" : "");
-          /*  String imagePath = @"Images/profiles/faycal.jpg";
-            String title = "RH MEETING  : new RH strategie";
-            String chefT = "Chef RH Team";
-            String date = "22-10-2023 08:52";
-            NotificationUI ui = new NotificationUI(1);
-            notifactionContent.Children.Add(ui);
-           
-            String imagePath1 = @"Images/profiles/youssef.jpg";
-            String title1 = "RH MEETING  : new RH strategie";
-            String chefT1 = "Chef RH Team";
-            String date1 = "22-10-2023 08:52";
-            NotificationUI ui1 = new NotificationUI(1);
-            notifactionContent.Children.Add(ui1);*/
+
         }
 
         private void MainWindow_LocationChanged(object sender, EventArgs e)
@@ -74,7 +62,7 @@ namespace UnitySpace
 
         private void create_meeting(object sender, RoutedEventArgs e)
         {
-            CC.Content = new Create_meeting();
+            CC.Content = new Create_meeting(_user.Id);
         }
         private void upcoming_meeting(object sender, RoutedEventArgs e)
         {
