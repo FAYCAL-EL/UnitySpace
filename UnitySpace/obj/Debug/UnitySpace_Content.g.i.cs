@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/ayoub.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/ghazali.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/maysaa.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/fenabdel.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/youssef.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/profiles/faycal.jpg")]

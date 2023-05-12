@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{866EEED6-97E4-4946-9104-BA722AF4EACD}</ProjectGuid>
+    <ProjectGuid>{7AE3AA49-C072-4CF2-A672-8004B6183CB1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>UnitySpace</RootNamespace>
     <AssemblyName>UnitySpace</AssemblyName>
@@ -249,9 +249,15 @@
     <Resource Include="Images\back.png" />
     <Resource Include="Images\add.png" />
     <Resource Include="Images\close.png" />
-    <Resource Include="Images\profiles\ayoub.jpg" />
-    <Resource Include="Images\profiles\ghazali.jpg" />
-    <Resource Include="Images\profiles\maysaa.jpg" />
+    <Content Include="Images\profiles\ayoub.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profiles\ghazali.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\profiles\maysaa.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\profiles\fenabdel.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -267,10 +273,10 @@
     <Resource Include="Images\search.png" />
     <Resource Include="Images\plus.png" />
     <Content Include="User.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="User_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>User.mdf</DependentUpon>
     </Content>
   </ItemGroup>

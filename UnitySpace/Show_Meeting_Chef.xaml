@@ -16,19 +16,19 @@
                         </Rectangle.Fill>
 
                     </Rectangle>
-                    <TextBlock Foreground="Black" Text="Back"/>
+                    <TextBlock Foreground="Black" Width="70"><Run Text="  "/><Run Language="fr-fr" Text="   "/><Run Text="Back"/></TextBlock>
                 </StackPanel>
             </Button >
 
-            <TextBlock x:Name="meetingTitle"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="20,90,0,0"/>
-            <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="640" Margin="21,11,0,0"/>
-            <TextBlock Text="Meeting Date : " FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
+            <TextBlock x:Name="meetingTitle"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="40,20,0,0"/>
+            <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="640" Margin="40,11,0,0"/>
+            <TextBlock Text="Meeting Date : " FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="40,50,0,0"/>
             <TextBlock x:Name="meetingDate" HorizontalAlignment="Left" Margin="40,30,0,0"/>
-            <TextBlock Text="Meeting Place : " FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
+            <TextBlock Text="Meeting Place : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,50,0,0"/>
             <TextBlock x:Name="meetingPlace"  HorizontalAlignment="Left" Margin="40,30,0,0"/>
-            <TextBlock Text="Participants : " FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
+            <TextBlock Text="Participants : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,50,0,0"/>
 
-            <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="21,30,0,0" Height="40">
+            <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,30,0,0" Height="40">
 
 
             </StackPanel>

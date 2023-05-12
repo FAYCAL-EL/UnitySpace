@@ -31,8 +31,9 @@
         <ComboBox x:Name="select_room" HorizontalAlignment="Left" Margin="63,377,0,0" VerticalAlignment="Top" Width="275"/>
         <TextBlock HorizontalAlignment="Left" Margin="423,355,0,0" TextWrapping="Wrap" Text="Select Material : " VerticalAlignment="Top" FontSize="11.5"/>
         <ComboBox x:Name="Select_material"  HorizontalAlignment="Left" Margin="423,377,0,0" VerticalAlignment="Top" Width="275">
+            <ListBox SelectionMode="Multiple" HorizontalAlignment="Left" Margin="423,377,0,0" VerticalAlignment="Top" Width="275" />
         </ComboBox>
-        <Button x:Name="add" Margin="70,413,0,179" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Click="Buttonparti_Click">
+        <Button x:Name="add" Margin="70,422,0,170" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Click="Buttonparti_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Images/add.png" Height="21" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
@@ -101,9 +102,12 @@
                                 </Grid>
 
                             </StackPanel>
-                            <StackPanel x:Name="participants_box" Grid.Row="2" Margin="20,0">
+                            <ScrollViewer Grid.Row="2" Margin="20,0">
+                                <StackPanel x:Name="participants_box" >
 
-                            </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                      
                             <StackPanel Grid.Row="3">
                                 <Button Width="117" Height="38" Background="#0ACA85" Margin="20,0,40,20" BorderBrush="{x:Null}" HorizontalAlignment="Right" Click="add_parts">
                                     <StackPanel Orientation="Horizontal" >

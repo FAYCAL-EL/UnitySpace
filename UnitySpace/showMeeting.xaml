@@ -8,7 +8,7 @@
             FontFamily="Poppins"
              d:DesignHeight="624" d:DesignWidth="800">
     <Grid Background="White">
-        <StackPanel>
+        <StackPanel Margin="40">
             <Button Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Click="Button_Click">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="15" Height="15">
@@ -17,15 +17,15 @@
                         </Rectangle.Fill>
 
                     </Rectangle>
-                    <TextBlock Foreground="Black" Text="Back"/>
+                    <TextBlock Foreground="Black"><Run Text="   "/><Run Language="fr-fr" Text=" "/><Run Text="Back"/></TextBlock>
                 </StackPanel>
             </Button>
 
             <TextBlock x:Name="meetingTitle"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="20,48,0,0"/>
             <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="640" Margin="21,11,0,0"/>
-            <TextBlock Text="Meeting Date : " FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
+            <TextBlock Text="Meeting Date : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
             <TextBlock x:Name="meetingDate" HorizontalAlignment="Left" Margin="40,5,0,0"/>
-            <TextBlock Text="Meeting Place : " FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
+            <TextBlock Text="Meeting Place : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="21,50,0,0"/>
             <TextBlock x:Name="meetingPlace"  HorizontalAlignment="Left" Margin="40,5,0,0"/>
 
             <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="21,50,0,0" Height="40">

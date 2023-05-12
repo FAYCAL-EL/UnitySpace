@@ -40,8 +40,8 @@ namespace UnitySpace
                 meetingTitle.Text = reader.GetString(0);
                 meetingDescription.Text = reader.GetString(1);
                 meetingDate.Text = reader.GetDateTime(2).ToString();
-                meetingPlace.Text = "Room N°15 4th Floor, National Labrary, Rabat ,Agdal , Morocco ";
-                /*reader.GetString(3);*/
+                meetingPlace.Text = reader.GetString(3);
+
             }
 
             reader.Close();

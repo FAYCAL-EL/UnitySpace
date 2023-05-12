@@ -41,7 +41,7 @@ namespace UnitySpace
 
             if (reader.Read())
             {
-                Part_name.Text = reader.GetString(0) + reader.GetString(1);
+                Part_name.Text = reader.GetString(0) +" "+ reader.GetString(1);
                 Part_Position.Text = reader.GetString(2);
                 string profil_path = "Images/profiles/"+reader.GetString(3);
                 profil.Source = new BitmapImage(new Uri(profil_path, UriKind.Relative));

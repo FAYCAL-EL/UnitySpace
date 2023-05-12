@@ -287,7 +287,6 @@ F:\UnitySpace\UnitySpace\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 F:\UnitySpace\UnitySpace\bin\Debug\Microsoft.Xaml.Behaviors.xml
 F:\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.AssemblyReference.cache
 F:\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.SuggestedBindingRedirects.cache
-F:\UnitySpace\UnitySpace\obj\Debug\Absence.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\Chef_Index.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\Comfirmed_meeting.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\Create_meeting.g.cs
@@ -304,7 +303,6 @@ F:\UnitySpace\UnitySpace\obj\Debug\UnitySpace_Content.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\UnitySpace_MarkupCompile.cache
 F:\UnitySpace\UnitySpace\obj\Debug\UnitySpace_MarkupCompile.lref
 F:\UnitySpace\UnitySpace\obj\Debug\App.baml
-F:\UnitySpace\UnitySpace\obj\Debug\Absence.baml
 F:\UnitySpace\UnitySpace\obj\Debug\Chef_Index.baml
 F:\UnitySpace\UnitySpace\obj\Debug\Comfirmed_meeting.baml
 F:\UnitySpace\UnitySpace\obj\Debug\Create_meeting.baml
@@ -399,3 +397,10 @@ D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\UnitySpace.Properties.Resource
 D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.GenerateResource.cache
 D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.CoreCompileInputs.cache
 D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.CopyComplete
+F:\UnitySpace\UnitySpace\obj\Debug\Absent.g.cs
+F:\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Chef.g.cs
+F:\UnitySpace\UnitySpace\obj\Debug\Absent.baml
+F:\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Chef.baml
+F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ayoub.jpg
+F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ghazali.jpg
+F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\maysaa.jpg
