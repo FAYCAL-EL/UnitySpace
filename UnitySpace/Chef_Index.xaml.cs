@@ -20,6 +20,8 @@ namespace UnitySpace
     public partial class Chef_Index : Window
     {
         private User _user ;
+        static public ContentControl home;
+
         static int numbOfNotif = 2;
         public Chef_Index(User user)
         {
@@ -29,6 +31,8 @@ namespace UnitySpace
             string profile = user.Profil;
             string image_path = "Images/profiles/" + profile;
             profil.Source = new BitmapImage(new Uri(image_path, UriKind.Relative));
+            home = CC;
+
 
             notifBullet.Text = numbOfNotif.ToString();
             notifBarCounter.Text = numbOfNotif.ToString() + " notification" + (numbOfNotif > 1 ? "s" : "");

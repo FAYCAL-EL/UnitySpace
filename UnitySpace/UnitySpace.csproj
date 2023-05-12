@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7AE3AA49-C072-4CF2-A672-8004B6183CB1}</ProjectGuid>
+    <ProjectGuid>{866EEED6-97E4-4946-9104-BA722AF4EACD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>UnitySpace</RootNamespace>
     <AssemblyName>UnitySpace</AssemblyName>
@@ -95,8 +95,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Absence.xaml.cs">
-      <DependentUpon>Absence.xaml</DependentUpon>
+    <Compile Include="Absent.xaml.cs">
+      <DependentUpon>Absent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Chef_Index.xaml.cs">
       <DependentUpon>Chef_Index.xaml</DependentUpon>
@@ -128,6 +128,9 @@
     <Compile Include="showMeeting.xaml.cs">
       <DependentUpon>showMeeting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Show_Meeting_Chef.xaml.cs">
+      <DependentUpon>Show_Meeting_Chef.xaml</DependentUpon>
+    </Compile>
     <Compile Include="upcoming_meeting.xaml.cs">
       <DependentUpon>upcoming_meeting.xaml</DependentUpon>
     </Compile>
@@ -135,9 +138,9 @@
     <Compile Include="NotificationUI.xaml.cs">
       <DependentUpon>NotificationUI.xaml</DependentUpon>
     </Compile>
-    <Page Include="Absence.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Absent.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Chef_Index.xaml">
       <SubType>Designer</SubType>
@@ -188,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="showMeeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Show_Meeting_Chef.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

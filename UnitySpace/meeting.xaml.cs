@@ -46,7 +46,7 @@ namespace UnitySpace
                 // Create a SQL query to retrieve meetings for the current chef ID
                 DateTime now = DateTime.Now;
                 string formattedNow = now.ToString("M/d/yyyy h:mm:ss tt");
-                string query = "SELECT title, chef FROM meetings WHERE chef = '" + _id + "' AND starting_date <= '" + formattedNow + "'";
+                string query = "SELECT title, meeting_id FROM meetings WHERE chef = '" + _id + "' AND starting_date <= '" + formattedNow + "'";
 
                 // Create a new SqlCommand with the query and connection
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -60,14 +60,14 @@ namespace UnitySpace
                         while (reader.Read())
                         {
                             // Create a new Meeting object
-                            Meeting meeting = new Meeting();
+                            Meeting meet = new Meeting();
 
                             // Set the properties of the Meeting object based on the retrieved data
-                            meeting.Title = reader.GetString(0);
-                            meeting.thisMeetid = reader.GetInt32(1);
+                            meet.Title = reader.GetString(0);
+                            meet.thisMeetid = reader.GetInt32(1);
 
                             // Add the Meeting object to the list
-                            meetings.Add(meeting);
+                            meetings.Add(meet);
                         }
 
                         // Now you have the list of meetings for the current chef ID
@@ -81,7 +81,7 @@ namespace UnitySpace
 
             // Create a button for each meeting
             double y = 10;
-            foreach (Meeting meeting in meetings)
+            foreach (Meeting meet in meetings)
             {
                 // Create a new button
                 Button button = new Button();
@@ -112,7 +112,7 @@ namespace UnitySpace
                 Label label = new Label();
                 label.Foreground = Brushes.White;
                 label.Margin = new Thickness(10, 0, 0, 0);
-                label.Content = meeting.Title;
+                label.Content = meet.Title;
                 stackPanel.Children.Add(label);
 
                 // Add an image to the stack panel to represent closing the meeting
@@ -124,6 +124,16 @@ namespace UnitySpace
 
                 // Set the content of the button to the stack panel
                 button.Content = stackPanel;
+
+                button.Click += (sender, e) =>
+                {
+                    this.Visibility = Visibility.Collapsed;
+                    Console.WriteLine("11111");
+
+                    Show_Meeting_Chef show1 = new Show_Meeting_Chef(meet.thisMeetid);
+                    Chef_Index.home.Content = show1;
+
+                };
 
                 // Add the button to the grid
                 StackPanel stackp = (StackPanel)grid.FindName("gridstack");

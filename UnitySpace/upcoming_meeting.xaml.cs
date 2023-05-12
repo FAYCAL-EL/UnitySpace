@@ -48,7 +48,7 @@ namespace UnitySpace
                 // Create a SQL query to retrieve meetings for the current chef ID
                 DateTime now = DateTime.Now;
                 string formattedNow = now.ToString("M/d/yyyy h:mm:ss tt");
-                string query = "SELECT title, chef FROM meetings WHERE chef = '" + _id + "' AND starting_date > '" + formattedNow + "'";
+                string query = "SELECT title, meeting_id FROM meetings WHERE chef = '" + _id + "' AND starting_date > '" + formattedNow + "'";
 
                 // Create a new SqlCommand with the query and connection
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -126,6 +126,17 @@ namespace UnitySpace
 
                 // Set the content of the button to the stack panel
                 button.Content = stackPanel;
+
+                // Add a click event handler to the button
+                button.Click += (sender, e) =>
+                {
+                    this.Visibility = Visibility.Collapsed;
+
+                    Show_Meeting_Chef show = new Show_Meeting_Chef(meeting.thisMeetid);
+                    Chef_Index.home.Content = show;
+
+                };
+
 
                 // Add the button to the grid
                 StackPanel stackp = (StackPanel)grid.FindName("gridstack");

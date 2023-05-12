@@ -96,7 +96,7 @@ namespace UnitySpace
         }
         private void comfirmed_meeting(object sender, RoutedEventArgs e)
         {
-            home.Content = new Comfirmed_meeting();
+            home.Content = new Comfirmed_meeting(user.Id);
         }
         private void logout(object sender, RoutedEventArgs e)
         {

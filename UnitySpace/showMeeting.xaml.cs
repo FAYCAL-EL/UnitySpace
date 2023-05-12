@@ -66,7 +66,7 @@ namespace UnitySpace
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             member_index.popUp.IsOpen = false;
-            member_index.home.Content = new Comfirmed_meeting();
+            member_index.home.Content = new Comfirmed_meeting(member_index.user.Id);
         }
 
         private void confirm_btn(object sender, RoutedEventArgs e)
@@ -84,13 +84,16 @@ namespace UnitySpace
             connection.Close();
 
 
-            member_index.home.Content = new Comfirmed_meeting();
+            member_index.home.Content = new Comfirmed_meeting(member_index.user.Id);
         }
 
         private void cancel_btn(object sender, RoutedEventArgs e)
         {
-            
-            member_index.home.Content = new Comfirmed_meeting();
+
+            member_index.home.Content = new Comfirmed_meeting(member_index.user.Id);
+
+            Absent abs = new Absent();
+            member_index.home.Content = abs;
         }
 
 
