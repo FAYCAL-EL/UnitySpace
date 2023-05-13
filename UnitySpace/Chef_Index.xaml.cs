@@ -36,7 +36,7 @@ namespace UnitySpace
 
             notifBullet.Text = numbOfNotif.ToString();
             notifBarCounter.Text = numbOfNotif.ToString() + " notification" + (numbOfNotif > 1 ? "s" : "");
-
+            CC.Content = new meeting(_user.Id);
         }
 
         private void MainWindow_LocationChanged(object sender, EventArgs e)

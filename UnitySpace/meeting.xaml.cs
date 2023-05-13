@@ -36,7 +36,7 @@ namespace UnitySpace
             // Create a list to store the retrieved meetings
 
             List<Meeting> meetings = new List<Meeting>();
-
+            int _selectedRowCount = 0;
             // Create a new SqlConnection using the connection string
             using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\User.mdf;Integrated Security=True"))
             {
@@ -55,7 +55,7 @@ namespace UnitySpace
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         // Create a list to store the retrieved meetings
-
+                        
                         // Read the data from the reader and create Meeting objects
                         while (reader.Read())
                         {
@@ -68,6 +68,7 @@ namespace UnitySpace
 
                             // Add the Meeting object to the list
                             meetings.Add(meet);
+                            _selectedRowCount++;
                         }
 
                         // Now you have the list of meetings for the current chef ID
@@ -76,11 +77,18 @@ namespace UnitySpace
                 }
             }
 
+            if(_selectedRowCount == 0)
+            {
+                gridstack.Margin = new Thickness(0, 100, 0, 0);
+                gridstack.Children.Add(new empty_meetings());
+            }
+
 
 
 
             // Create a button for each meeting
             double y = 10;
+            
             foreach (Meeting meet in meetings)
             {
                 // Create a new button
@@ -95,17 +103,18 @@ namespace UnitySpace
 
                 // Set the properties of the button
                 button.Height = 50;
-                button.Width = 500;
+                button.Width = 600;
                 button.Margin = new Thickness(0, y, 0, 0);
-
+                button.BorderBrush = new SolidColorBrush(Colors.White);
                 // Create a stack panel to hold the content of the button
                 StackPanel stackPanel = new StackPanel();
                 stackPanel.Orientation = Orientation.Horizontal;
-
+                stackPanel.HorizontalAlignment = HorizontalAlignment.Left;
                 // Add an image to the stack panel
                 Image image = new Image();
                 image.Source = new BitmapImage(new Uri("Images/check-box.png", UriKind.Relative));
                 image.Width = 18;
+
                 stackPanel.Children.Add(image);
 
                 // Add a label to the stack panel with the meeting title

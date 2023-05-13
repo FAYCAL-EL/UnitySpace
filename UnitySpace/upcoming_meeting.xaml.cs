@@ -34,6 +34,7 @@ namespace UnitySpace
 
             _id = idChef;
             InitializeComponent();
+            int _selectedRowCount = 0;
 
             // Create a list to store the retrieved meetings
 
@@ -70,6 +71,8 @@ namespace UnitySpace
 
                             // Add the Meeting object to the list
                             meetings.Add(meeting);
+                            _selectedRowCount++;
+
                         }
 
                         // Now you have the list of meetings for the current chef ID
@@ -80,6 +83,11 @@ namespace UnitySpace
 
 
 
+            if (_selectedRowCount == 0)
+            {
+                gridstack.Margin = new Thickness(0, 100, 0, 0);
+                gridstack.Children.Add(new empty_meetings());
+            }
 
             // Create a button for each meeting
             double y = 10;
@@ -97,9 +105,9 @@ namespace UnitySpace
 
                 // Set the properties of the button
                 button.Height = 50;
-                button.Width = 500;
+                button.Width = 600;
                 button.Margin = new Thickness(0, y, 0, 0);
-
+                button.BorderBrush = new SolidColorBrush(Colors.White);
                 // Create a stack panel to hold the content of the button
                 StackPanel stackPanel = new StackPanel();
                 stackPanel.Orientation = Orientation.Horizontal;

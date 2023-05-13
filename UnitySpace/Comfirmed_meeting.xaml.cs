@@ -93,9 +93,9 @@ namespace UnitySpace
 
                                 // Set the properties of the button
                                 button.Height = 50;
-                                button.Width = 500;
+                                button.Width = 600;
                                 button.Margin = new Thickness(0, y, 0, 0);
-
+                                button.BorderBrush = new SolidColorBrush(Colors.White);
                                 // Create a stack panel to hold the content of the button
                                 StackPanel stackPanel = new StackPanel();
                                 stackPanel.Orientation = Orientation.Horizontal;
