@@ -17,6 +17,9 @@
             <ColumnDefinition Width="508"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <ScrollViewer>
+            
+        
         <StackPanel Margin="0,0,5,0">
             <Button Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Click="Button_Click">
                 <StackPanel Orientation="Horizontal">
@@ -40,9 +43,15 @@
 
             <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,30,0,0" Height="40"></StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="240" Width="267">
+        </ScrollViewer>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="240" Width="267" Margin="0,372,0,0">
 
-            <Button x:Name="DownloadButton" Background="#3880FF" Width="180" Content="Download PDF report" Click="DownloadButton_Click" Margin="-30,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <Button x:Name="DownloadButton" Background="#3880FF" Width="180" Click="DownloadButton_Click" Margin="-30,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/download.png" Width="15"></Image>
+                    <TextBlock Margin="15 0">  Meeting report</TextBlock>
+                </StackPanel>
+            </Button>
 
             <TextBlock x:Name="DownloadMessaage" TextWrapping="Wrap" Text="" Margin="-30,15,0,0" Width="180">
                 <TextBlock.Style >

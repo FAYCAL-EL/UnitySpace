@@ -500,3 +500,4 @@ D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\notificationChef.baml
 D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\showAbsent.baml
 D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.baml
 D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\33750\Desktop\UnitySpace\UnitySpace\obj\Debug\GeneratedInternalTypeHelper.g.cs

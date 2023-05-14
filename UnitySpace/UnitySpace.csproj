@@ -270,6 +270,7 @@
     <Resource Include="Images\back.png" />
     <Resource Include="Images\add.png" />
     <Resource Include="Images\close.png" />
+    <Resource Include="download.png" />
     <Content Include="Images\profiles\admin.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

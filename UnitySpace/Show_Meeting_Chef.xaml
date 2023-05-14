@@ -41,10 +41,15 @@
 
             <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,30,0,0" Height="40"></StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="240" Width="267">
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="240" Width="267" Margin="18,384,0,0">
 
 
-            <Button x:Name="AttachButton" Background="#3880FF" Content="Attach PDF report" Click="AttachButton_Click" Width="180" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <Button x:Name="AttachButton" Background="#3880FF"  Click="AttachButton_Click" Width="180" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/cloud-computing.png" Width="15"></Image>
+                    <TextBlock Margin="15 0">  Upload report</TextBlock>
+                </StackPanel>
+            </Button>
             <TextBlock x:Name="AttachmentMessage" TextWrapping="Wrap" Text="" Margin="0, 15,0,0" Width="180">
                 <TextBlock.Style>
                     <Style TargetType="TextBlock">
@@ -59,7 +64,12 @@
             </TextBlock>
 
 
-            <Button x:Name="DownloadButton" Background="#3880FF" Width="180" Content="Download PDF report" Click="DownloadButton_Click" Margin="0,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <Button x:Name="DownloadButton" Background="#3880FF" Width="180" Click="DownloadButton_Click" Margin="0,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/download.png" Width="15"></Image>
+                    <TextBlock Margin="15 0">  Meeting report</TextBlock>
+                </StackPanel>
+            </Button>
             <TextBlock x:Name="DownloadMessaage" TextWrapping="Wrap" Text="" Margin="0, 15,0,0" Width="180"/>
 
 
