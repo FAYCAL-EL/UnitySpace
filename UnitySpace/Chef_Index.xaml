@@ -44,7 +44,7 @@
                 <Button x:Name="Rbtn3" Click="meeting" Foreground="#fff" HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Images/check-box.png" Width="15" Margin="0,0,20,0"></Image>
-                        <TextBlock>Meetings</TextBlock>
+                        <TextBlock>Meetings Histoty</TextBlock>
                     </StackPanel>
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF673AB7" Opacity="0"/>

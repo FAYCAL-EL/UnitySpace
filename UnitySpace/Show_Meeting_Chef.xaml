@@ -4,10 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UnitySpace"
+             
+             
              FontFamily="Poppins"
-             Height="624" Width="800">
+             Height="624" Width="800"
+             >
+    <UserControl.Resources>
+        <local:DateTimeToVisibilityConverter x:Key="DateTimeToVisibilityConverter"/>
+    </UserControl.Resources>
+
     <Grid Background="White">
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="478"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,5,0">
             <Button Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Click="Button_Click">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="15" Height="15">
@@ -21,18 +32,40 @@
             </Button >
 
             <TextBlock x:Name="meetingTitle"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="40,20,0,0"/>
-            <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="640" Margin="40,11,0,0"/>
+            <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="400" Margin="40,11,0,0"/>
             <TextBlock Text="Meeting Date : " FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="40,50,0,0"/>
             <TextBlock x:Name="meetingDate" HorizontalAlignment="Left" Margin="40,30,0,0"/>
             <TextBlock Text="Meeting Place : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,50,0,0"/>
             <TextBlock x:Name="meetingPlace"  HorizontalAlignment="Left" Margin="40,30,0,0"/>
             <TextBlock Text="Participants : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,50,0,0"/>
 
-            <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,30,0,0" Height="40">
-
-
-            </StackPanel>
+            <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,30,0,0" Height="40"></StackPanel>
         </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="240" Width="267">
+
+
+            <Button x:Name="AttachButton" Background="#3880FF" Content="Attach PDF report" Click="AttachButton_Click" Width="180" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <TextBlock x:Name="AttachmentMessage" TextWrapping="Wrap" Text="" Margin="0, 15,0,0" Width="180">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Visibility, ElementName=AttachButton}" Value="Visible">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+
+            <Button x:Name="DownloadButton" Background="#3880FF" Width="180" Content="Download PDF report" Click="DownloadButton_Click" Margin="0,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            <TextBlock x:Name="DownloadMessaage" TextWrapping="Wrap" Text="" Margin="0, 15,0,0" Width="180"/>
+
+
+
+        </StackPanel>
+
     </Grid>
 
 </UserControl>

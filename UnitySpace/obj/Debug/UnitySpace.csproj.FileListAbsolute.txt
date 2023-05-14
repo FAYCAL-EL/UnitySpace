@@ -489,3 +489,14 @@ C:\Users\33750\Desktop\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.CoreCom
 C:\Users\33750\Desktop\UnitySpace\UnitySpace\obj\Debug\UnitySpace.csproj.CopyComplete
 C:\Users\33750\Desktop\UnitySpace\UnitySpace\obj\Debug\UnitySpace.exe
 C:\Users\33750\Desktop\UnitySpace\UnitySpace\obj\Debug\UnitySpace.pdb
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\bin\Debug\Images\profiles\admin.jpg
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ayoub.jpg
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\bin\Debug\Images\profiles\ghazali.jpg
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\bin\Debug\Images\profiles\maysaa.jpg
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\notificationChef.g.cs
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\showAbsent.g.cs
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.g.cs
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\notificationChef.baml
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\showAbsent.baml
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.baml
+D:\CI2\UnitySpace\UnitySpace\UnitySpace\obj\Debug\GeneratedInternalTypeHelper.g.cs
