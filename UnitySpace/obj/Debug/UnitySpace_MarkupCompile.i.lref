@@ -1,19 +1,6 @@
 ﻿
-FF:\UnitySpace\UnitySpace\App.xaml;;
-FF:\UnitySpace\UnitySpace\Absent.xaml;;
-FF:\UnitySpace\UnitySpace\Chef_Index.xaml;;
-FF:\UnitySpace\UnitySpace\Comfirmed_meeting.xaml;;
-FF:\UnitySpace\UnitySpace\Create_meeting.xaml;;
-FF:\UnitySpace\UnitySpace\empty_meetings.xaml;;
-FF:\UnitySpace\UnitySpace\MainWindow.xaml;;
-FF:\UnitySpace\UnitySpace\meeting.xaml;;
-FF:\UnitySpace\UnitySpace\member_index.xaml;;
-FF:\UnitySpace\UnitySpace\participantIcon.xaml;;
-FF:\UnitySpace\UnitySpace\Participant.xaml;;
-FF:\UnitySpace\UnitySpace\part_pic.xaml;;
-FF:\UnitySpace\UnitySpace\showMeeting.xaml;;
-FF:\UnitySpace\UnitySpace\Show_Meeting_Chef.xaml;;
-FF:\UnitySpace\UnitySpace\Show_Meeting_Member.xaml;;
-FF:\UnitySpace\UnitySpace\upcoming_meeting.xaml;;
-FF:\UnitySpace\UnitySpace\NotificationUI.xaml;;
+
+FE:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\Chef_Index.xaml;;
+FE:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\notificationChef.xaml;;
+FE:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\showAbsent.xaml;;
 

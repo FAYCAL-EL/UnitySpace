@@ -415,3 +415,7 @@ E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\bin\Deb
 F:\UnitySpace\UnitySpace\bin\Debug\Images\profiles\admin.jpg
 F:\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.g.cs
 F:\UnitySpace\UnitySpace\obj\Debug\Show_Meeting_Member.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\notificationChef.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\notificationChef.baml
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\showAbsent.g.cs
+E:\ysf\study\ci\ci2\S8\DotNet\projet\versionRemote\UnitySpace\UnitySpace\obj\Debug\showAbsent.baml

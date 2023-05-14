@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="UnitySpace.notificationChef"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UnitySpace"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Button Background="{x:Null}" Width="270" Height="50" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">
+        <Grid Width="270" Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True">
+                    <Border.Background>
+                        <ImageBrush x:Name="chefImage" />
+                    </Border.Background>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.ColumnSpan="6" VerticalAlignment="Center">
+             
+                  <TextBlock x:Name="chefTitle" Foreground="Black" FontWeight="Bold" Margin="5,0,15,0" />
+                    <TextBlock x:Name="notificationTitle" Foreground="Black" FontSize="9" Margin="5,0,0,0"/>
+                  
+            </StackPanel>
+
+        </Grid>
+    </Button>
+</UserControl>

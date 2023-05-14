@@ -116,6 +116,9 @@
     <Compile Include="member_index.xaml.cs">
       <DependentUpon>member_index.xaml</DependentUpon>
     </Compile>
+    <Compile Include="notificationChef.xaml.cs">
+      <DependentUpon>notificationChef.xaml</DependentUpon>
+    </Compile>
     <Compile Include="participantIcon.xaml.cs">
       <DependentUpon>participantIcon.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,9 @@
     </Compile>
     <Compile Include="part_pic.xaml.cs">
       <DependentUpon>part_pic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showAbsent.xaml.cs">
+      <DependentUpon>showAbsent.xaml</DependentUpon>
     </Compile>
     <Compile Include="showMeeting.xaml.cs">
       <DependentUpon>showMeeting.xaml</DependentUpon>
@@ -181,6 +187,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="notificationChef.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="participantIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -190,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="part_pic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showAbsent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

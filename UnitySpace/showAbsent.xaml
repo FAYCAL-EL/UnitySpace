@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="UnitySpace.showAbsent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UnitySpace"
+             mc:Ignorable="d" 
+             FontFamily="poppins"
+             d:DesignHeight="620" d:DesignWidth="754.5">
+    <Grid Background="White">
+        <ScrollViewer>
+            <StackPanel Margin="40 0">
+                <Button Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Click="Button_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="15" Height="15">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Images/back.png"/>
+                            </Rectangle.Fill>
+
+                        </Rectangle>
+                        <TextBlock Foreground="Black"><Run Text="   "/><Run Language="fr-fr" Text=" "/><Run Text="Back"/></TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <StackPanel Orientation="Horizontal" Margin="40,50,0,0">
+                    <TextBlock FontWeight="Bold" FontSize="20" VerticalAlignment="Center" Margin="0,0,20,0">Meeting title: </TextBlock>
+                    <TextBlock x:Name="meetingTitle" VerticalAlignment="Center" FontSize="18"/> 
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="40,48,19,0">
+
+                    <Border  BorderThickness="1,1,1,1" CornerRadius="30" Width="60" Height="60" HorizontalAlignment="Left" BorderBrush="#FF18206F" ClipToBounds="True" SnapsToDevicePixels="True" VerticalAlignment="Center">
+                        <Border.Background>
+                            <ImageBrush x:Name="participant" />
+                        </Border.Background>
+                    </Border>
+                    <TextBlock x:Name="fullName"  FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Margin="25,0,0,0"/>
+                </StackPanel>
+                <TextBlock FontWeight="Bold" FontSize="16" VerticalAlignment="Center" Margin="40,29,20,0">Absence reason :</TextBlock>
+                <TextBlock x:Name="AbsenceReason"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="616" Margin="40,11,0,0" TextAlignment="Justify" Padding="0,0,15,0"/>
+               
+               
+
+               
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+    </Grid>
+</UserControl>
