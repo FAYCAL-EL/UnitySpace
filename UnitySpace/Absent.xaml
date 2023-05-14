@@ -9,17 +9,15 @@
              d:DesignHeight="624" d:DesignWidth="800">
     <Grid Background="white">
 
-        <TextBlock HorizontalAlignment="Left" Margin="72,123,0,0" TextWrapping="Wrap" Text="RH MEETING : new RH strategie" VerticalAlignment="Top" Height="34" Width="426" FontSize="22.5" FontWeight="Bold"/>
-        <TextBox BorderThickness="0"  HorizontalAlignment="Left" Height="78" Margin="72,173,0,0" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" FontSize="11.25" />
+        <TextBlock x:Name="meeting_title" HorizontalAlignment="Left" Margin="72,20,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="34" Width="426" FontSize="22.5" FontWeight="Bold"/>
+        <TextBlock x:Name="meeting_desc" HorizontalAlignment="Left" Margin="72,68,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Width="632" FontSize="11.25" />
 
-        <TextBox x:Name="justif" BorderThickness="1" HorizontalAlignment="Left" Height="67" Margin="72,300,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
-        <TextBlock HorizontalAlignment="Left" Margin="72,276,0,0" TextWrapping="Wrap" Text="Absence justification : *" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="justif" BorderThickness="1" HorizontalAlignment="Left" Height="128" Margin="72,225,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
+        <TextBlock HorizontalAlignment="Left" Margin="72,186,0,0" TextWrapping="Wrap" Text="Absence justification : *" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
 
-        <Image Source="Images/cross (1).png" Margin="69,383,714,0" Height="21" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="99,383,0,0" TextWrapping="Wrap" Text="add document justification" VerticalAlignment="Top" Width="182" FontSize="14"  />
+        <Button Content="Submit" Background="#0ACA85" HorizontalAlignment="Left" Height="39" Margin="583,380,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.521,0.462" Click="Button_Click" BorderBrush="{x:Null}" />
 
-        <Button Content="Submit" Background="#0ACA85" HorizontalAlignment="Left" Height="39" Margin="587,422,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.521,0.462" Click="Button_Click" />
-
+        <TextBlock x:Name="error_justif" Foreground="red" Margin="72,383,242,191" Height="50"/>
 
     </Grid>
 </UserControl>

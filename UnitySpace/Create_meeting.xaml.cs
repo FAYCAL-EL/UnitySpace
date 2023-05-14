@@ -121,7 +121,8 @@ namespace UnitySpace
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            ContentControl cc = (ContentControl)Parent;
+            cc.Content = new upcoming_meeting(_id);
         }
 
         private void Buttonparti_Click(object sender, RoutedEventArgs e)

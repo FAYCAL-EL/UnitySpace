@@ -13,13 +13,8 @@
     </UserControl.Resources>
 
     <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="508"/>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <ScrollViewer>
-            
-        
+
+
         <StackPanel Margin="0,0,5,0">
             <Button Background="Transparent" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Click="Button_Click">
                 <StackPanel Orientation="Horizontal">
@@ -34,23 +29,40 @@
             </Button >
 
             <TextBlock x:Name="meetingTitle"  FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="40,20,0,0"/>
-            <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="400" Margin="40,11,0,0"/>
-            <TextBlock Text="Meeting Date : " FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="40,50,0,0"/>
-            <TextBlock x:Name="meetingDate" HorizontalAlignment="Left" Margin="40,30,0,0"/>
-            <TextBlock Text="Meeting Place : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,50,0,0"/>
-            <TextBlock x:Name="meetingPlace"  HorizontalAlignment="Left" Margin="40,30,0,0"/>
+            <TextBlock x:Name="meetingDescription"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="600" Margin="40,11,0,0"/>
+            <TextBlock Text="Meeting Date : " FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="40,10,0,0"/>
+            <TextBlock x:Name="meetingDate" HorizontalAlignment="Left" Margin="40,20,0,0"/>
+            <TextBlock Text="Meeting Place : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,20,0,0"/>
+            <TextBlock x:Name="meetingPlace"  HorizontalAlignment="Left" Margin="40,20,0,0"/>
             <TextBlock Text="Participants : " FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Margin="40,50,0,0"/>
 
             <StackPanel x:Name="participants" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,30,0,0" Height="40"></StackPanel>
         </StackPanel>
-        </ScrollViewer>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="240" Width="267" Margin="0,372,0,0">
 
-            <Button x:Name="DownloadButton" Background="#3880FF" Width="180" Click="DownloadButton_Click" Margin="-30,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}" BorderBrush="{x:Null}">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Images/download.png" Width="15"></Image>
-                    <TextBlock Margin="15 0">  Meeting report</TextBlock>
-                </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="240" Width="267" Margin="504,376,0,0">
+
+            <Button x:Name="DownloadButton" Background="#3880FF" Width="50" Height="50" Click="DownloadButton_Click" Margin="-30,60,0,0" Visibility="{Binding MeetingStartingDate, Converter={StaticResource DateTimeToVisibilityConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}" BorderBrush="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="315" ShadowDepth="2" Opacity="0.8" />
+                </Button.Effect>
+                <Image Source="Images/download.png" Width="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Image>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="50"/>
+                            <ContentPresenter x:Name="contentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF34495E" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF2C3E50" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+
             </Button>
 
             <TextBlock x:Name="DownloadMessaage" TextWrapping="Wrap" Text="" Margin="-30,15,0,0" Width="180">

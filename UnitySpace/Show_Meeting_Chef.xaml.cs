@@ -200,11 +200,12 @@ namespace UnitySpace
                             System.IO.File.Copy(filePath, downloadFilePath, true);
                         }
                         DownloadMessaage.Text = "Successfully Downloaded";
-
+                        DownloadMessaage.Foreground = new SolidColorBrush(Colors.Green);
                     }
                     else
                     {
-                        DownloadMessaage.Text = "No report available!";     
+                        DownloadMessaage.Text = "No report available!";
+                        DownloadMessaage.Foreground = new SolidColorBrush(Colors.Red);
                     }
                 }
             }

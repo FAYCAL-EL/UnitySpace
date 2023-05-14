@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -27,22 +28,41 @@ namespace UnitySpace
         {
             InitializeComponent();
             _id = id;
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+
             connection.Open();
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = "UPDATE [meeting_member] SET isComfirmed = 'false',justification='" + justif.Text + "' where idMeeting='" + _id + "' and idMember='" + member_index.user.Id + "'";
-            int rowsAffected = command.ExecuteNonQuery();
-            if (rowsAffected > 0)
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT title, description FROM [meetings] WHERE [meetings].meeting_id = '" + _id + "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
             {
-                Console.WriteLine("yes");
+                meeting_title.Text = reader.GetString(0);
+                meeting_desc.Text = reader.GetString(1);
             }
 
             connection.Close();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(justif.Text))
+            {
+                error_justif.Text = "Justification field can not be empty !";
+                justif.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF0000"));
+            }
+            else
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE [meeting_member] SET isComfirmed = 'false',justification='" + justif.Text + "' where idMeeting='" + _id + "' and idMember='" + member_index.user.Id + "'";
+                int rowsAffected = command.ExecuteNonQuery();
+
+                connection.Close();
 
 
-            member_index.home.Content = new Comfirmed_meeting(member_index.user.Id);
+                member_index.home.Content = new Comfirmed_meeting(member_index.user.Id);
+            }
+           
         }
     }
 }

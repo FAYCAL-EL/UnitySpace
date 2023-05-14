@@ -16,7 +16,7 @@
         <StackPanel Grid.Column="0" Background="#3880FF" >
             <Image Source="Images/logo2.png" Width="73" Height="73" Margin="93,44"></Image>
             <StackPanel Margin="20,80">
-                <Button x:Name="Rbtn1" Loaded="comfirmed_meeting" Foreground="#fff" HorizontalAlignment="Left" Margin="0,0,0,10" >
+                <Button x:Name="Rbtn1" Click="comfirmed_meeting" Loaded="comfirmed_meeting" Foreground="#fff" HorizontalAlignment="Left" Margin="0,0,0,10" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Images/check-box.png" Width="15" Margin="0,0,20,0"></Image>
                         <TextBlock>Comfirmed Meeting</TextBlock>
