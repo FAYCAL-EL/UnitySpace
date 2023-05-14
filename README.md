@@ -1,6 +1,6 @@
 # UnitySpace
 
-Introduction: 
+##Introduction: 
 
 UnitySpace; a desktop application for APPLICATION COLLABORATIVE-MEETING. The application allows users to authenticate and access different functionalities based on their profile. Project managers can create new meetings, select participants, specify the date and location, reserve a room and equipment, send notifications to participants, and view the history of their meetings. Team members can view their meetings, the list of participants, confirm their attendance, and justify their absence.
 Functionalities:
