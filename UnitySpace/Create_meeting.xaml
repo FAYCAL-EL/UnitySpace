@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
              xmlns:local="clr-namespace:UnitySpace"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:toolkit1="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
              FontFamily="Poppins"
              d:DesignHeight="624" d:DesignWidth="800">
@@ -22,18 +23,25 @@
         <TextBox x:Name="meeting_title" BorderThickness="1"  HorizontalAlignment="Left" Height="25" Margin="63,111,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
         <TextBlock HorizontalAlignment="Left" Margin="63,149,0,0" TextWrapping="Wrap" Text="Meeting Description : " VerticalAlignment="Top" FontSize="11.5"/>
         <TextBox x:Name="description" BorderThickness="1" HorizontalAlignment="Left" Height="67" Margin="63,173,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="632" />
-        <TextBlock HorizontalAlignment="Left" Margin="63,277,0,0" TextWrapping="Wrap" Text="Meeting starting Date : " VerticalAlignment="Top" FontSize="11.5"/>
-        <DatePicker x:Name="start_date" HorizontalAlignment="Left" Height="24" Margin="63,296,0,0" Width="221" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top"/>
-        
-        <TextBlock HorizontalAlignment="Left" Margin="423,277,0,0" TextWrapping="Wrap" Text="Meeting Ending Date : " VerticalAlignment="Top" FontSize="11.5"/>
-        <DatePicker x:Name="end_date" HorizontalAlignment="Left" Height="24" Margin="423,296,0,0" Width="221" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,271,0,0" TextWrapping="Wrap" Text="Meeting starting Date : " VerticalAlignment="Top" FontSize="11.5"/>
+        <ComboBox x:Name="starthour" Width="50" Margin="-350,0,0,0" ></ComboBox>
+        <ComboBox x:Name="startminutes" Width="50" Margin="-200,0,0,0" ></ComboBox>
+
+        <DatePicker x:Name="start_date" HorizontalAlignment="Left" Height="24" Margin="63,0,0,0" Width="100" RenderTransformOrigin="0.5,0.5"/>
+
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="423,271,0,0" TextWrapping="Wrap" Text="Meeting Ending Date : " VerticalAlignment="Top" FontSize="11.5"/>
+        <DatePicker x:Name="end_date" HorizontalAlignment="Left" Height="24" Margin="423,296,0,0" Width="100" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Background="{x:Null}"/>
+        <ComboBox x:Name="endhour" Width="50" Margin="370,-10,0,0" ></ComboBox>
+        <ComboBox x:Name="endminutes" Width="50" Margin="520,-8,0,0" ></ComboBox>
+
         <TextBlock HorizontalAlignment="Left" Margin="63,355,0,0" TextWrapping="Wrap" Text="Select Room : " VerticalAlignment="Top" FontSize="11.5"/>
         <ComboBox x:Name="select_room" HorizontalAlignment="Left" Margin="63,377,0,0" VerticalAlignment="Top" Width="275"/>
         <TextBlock HorizontalAlignment="Left" Margin="423,355,0,0" TextWrapping="Wrap" Text="Select Material : " VerticalAlignment="Top" FontSize="11.5"/>
         <ComboBox x:Name="Select_material"  HorizontalAlignment="Left" Margin="423,377,0,0" VerticalAlignment="Top" Width="275">
-            <ListBox SelectionMode="Multiple" HorizontalAlignment="Left" Margin="423,377,0,0" VerticalAlignment="Top" Width="275" />
         </ComboBox>
-        
+
         <Button x:Name="add" Margin="70,422,0,170" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Click="Buttonparti_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Images/add.png" Height="21" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
@@ -49,11 +57,21 @@
                 <TextBlock Height="21"  TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Foreground="#DD000000"><Run Language="fr-fr" Text="     "/><Run Text="add Paticipant"/></TextBlock>
             </StackPanel>
         </Button>
+
         <StackPanel x:Name="participants_pic" Orientation="Horizontal" Height="50" Margin="64,467,-64,107">
 
 
         </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="64,467,-64,107" Width="500" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Image Name="members_error_pic" Source="Images/multiply.png"  Width="15" VerticalAlignment="Top" Visibility="Hidden" ></Image>
+            <TextBlock x:Name="members_error" Margin="40 0" Foreground="Red" TextWrapping="Wrap" MaxWidth="400"></TextBlock>
 
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="40,529,0,0" Width="500" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Image Name="error_pic" Source="Images/multiply.png"  Width="15" VerticalAlignment="Top" Visibility="Hidden" ></Image>
+            <TextBlock x:Name="error" Margin="40 0" Foreground="Red" TextWrapping="Wrap" MaxWidth="400"></TextBlock>
+
+        </StackPanel>
         <Button Content="Create" Background="#0ACA85" HorizontalAlignment="Left" Height="39" Margin="578,526,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.521,0.462" BorderBrush="{x:Null}" Click="Create"/>
 
         <Popup x:Name="ParticipantPopup" IsOpen="False" StaysOpen="False" Width="660" Height="360" AllowsTransparency="True" PlacementTarget="{Binding ElementName=add}" VerticalOffset="0" HorizontalOffset="330">
@@ -108,7 +126,7 @@
 
                                 </StackPanel>
                             </ScrollViewer>
-                      
+
                             <StackPanel Grid.Row="3">
                                 <Button Width="117" Height="38" Background="#0ACA85" Margin="20,0,40,20" BorderBrush="{x:Null}" HorizontalAlignment="Right" Click="add_parts">
                                     <StackPanel Orientation="Horizontal" >
