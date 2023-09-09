@@ -26,3 +26,6 @@ Team members can access reports for past meetings using the application. They ca
 To use the application, users need to authenticate using their email and password credentials. Project managers and team members will have different credentials, allowing them to access different functionalities in the application.
 ## Conclusion:
 In conclusion, our team has developed a desktop application for APPLICATION COLLABORATIVE-MEETING that allows project managers to create meetings, reserve rooms and equipment, and view the history of their meetings. Team members can view their upcoming meetings, confirm their attendance, justify their absence, and access reports for past meetings. Project managers can attach reports for past meetings using the application. The application requires users to authenticate using their email and password credentials, ensuring that only authorized users can access the application.
+
+## License
+[BSD-3 License](LICENSE)
